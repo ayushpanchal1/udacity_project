@@ -13,7 +13,8 @@ provider:
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    $ATTACHMENT_S3_BUCKET: ayushserverless-112233-${self:provider.stage}
+    ATTACHMENT_S3_BUCKET: ayushserverless-112233-${self:provider.stage}
+    SIGNED_URL_EXPIRATION: 3000
 
 functions:
 
