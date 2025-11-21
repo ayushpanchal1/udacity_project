@@ -35,7 +35,7 @@ export class TodosAcess {
     }
     
     async updateTodo(userId, todoId, todoUpdate){
-        const result = this.documentClient.update({
+        const result = await this.documentClient.update({
             TableName: this.todosTable,
             Key: {
                 userId: userId,

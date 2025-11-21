@@ -1,11 +1,11 @@
 import { TodosAcess } from "../dataLayer/todosAccess.mjs";
 import { AttachmentUtils } from "../fileStorage/attachmentUtils.mjs";
-import {v4 as uuid} from uuid;
+import { v4 as uuid } from 'uuid'; 
 import { createLogger } from "../utils/logger.mjs";
 
 const logger = createLogger('todos')
-const todosAccess = TodosAcess()
-const attachmentUtils = AttachmentUtils()
+const todosAccess = new TodosAcess()
+const attachmentUtils = new AttachmentUtils()
 
 export async function getTodosForUser(userId){
     logger.info(`getting todos for ${userId}`)
