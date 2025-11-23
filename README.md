@@ -2,13 +2,25 @@
 
 To implement this project you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all the `TODO:` comments in the code to find the placeholders that you need to implement.
 
-# env vars (starter/client/.env)
+# client env vars (starter/client/.env)
 
 REACT_APP_AUTH0_DOMAIN=
 
 REACT_APP_AUTH0_CLIENT_ID=
 
 REACT_APP_API_ENDPOINT=
+
+# serverless backend env vars (starter/backend/serverless.yml)
+
+```
+provider:
+  environment:
+      TODOS_TABLE: Todos-${self:provider.stage}
+      TODOS_CREATED_AT_INDEX: CreatedAtIndex
+      ATTACHMENT_S3_BUCKET: ayushserverless-112233-${self:provider.stage} # You can change 'ayushserverless-112233-' to any unique bucket name prefix
+      SIGNED_URL_EXPIRATION: 3000
+      AUTH0_DOMAIN: ENTER_YOUR_AUTH0_DOMAIN_HERE # Replace with your Auth0 domain
+```
 
 # Functionality of the application
 

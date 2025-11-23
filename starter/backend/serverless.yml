@@ -16,7 +16,7 @@ provider:
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    ATTACHMENT_S3_BUCKET: ayushserverless-112233-${self:provider.stage}
+    ATTACHMENT_S3_BUCKET: ayushserverless-112233-${self:provider.stage} # You can change 'ayushserverless-112233-' to any unique bucket name prefix
     SIGNED_URL_EXPIRATION: 3000
     AUTH0_DOMAIN: ENTER_YOUR_AUTH0_DOMAIN_HERE # Replace with your Auth0 domain
 
